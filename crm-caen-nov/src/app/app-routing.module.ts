@@ -5,7 +5,6 @@ import { PageLoginComponent } from './login/pages/page-login/page-login.componen
 
 
 const appRoutes: Routes = [
-  { path: 'login', component: PageLoginComponent },
 
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {

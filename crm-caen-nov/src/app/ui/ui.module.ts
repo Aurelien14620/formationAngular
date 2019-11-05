@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {CoderbaseUiModule} from '@coderbase/ui';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import {CoderbaseUiModule} from '@coderbase/ui';
   exports: [UiComponent],
   imports: [
     CommonModule,
-    CoderbaseUiModule
+    CoderbaseUiModule,
+    RouterModule
   ]
 })
 export class UiModule { }

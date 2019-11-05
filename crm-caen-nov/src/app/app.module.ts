@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -13,7 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     UiModule,
-    LoginModule
+    LoginModule,
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

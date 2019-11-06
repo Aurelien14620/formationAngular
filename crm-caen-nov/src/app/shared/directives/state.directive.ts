@@ -2,12 +2,14 @@ import { Directive, Input, HostBinding, OnChanges } from '@angular/core';
 import { Prestation } from '../models/prestation';
 import { State } from '../enums/state.enum';
 import { analyzeNgModules } from '@angular/compiler';
+import { StateClient } from '../enums/state-client.enum';
 
 @Directive({
   selector: '[appState]'
 })
 export class StateDirective implements OnChanges {
-  @Input() appState: State;
+  // tslint:disable-next-line: no-unused-expression
+  @Input() appState: State | StateClient;
   @HostBinding('class') hostAttr: string;
   constructor() {
   }

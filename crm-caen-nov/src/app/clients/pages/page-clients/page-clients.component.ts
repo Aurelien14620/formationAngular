@@ -13,13 +13,16 @@ export class PageClientsComponent implements OnInit {
   public collection: Client[];
   public headersClient = [ 'Name', 'Email' , 'State'];
   public states = Object.values(StateClient);
+  public title: string;
+  public label: string;
 
   constructor(
     private clientService: ClientsService) { }
 
   ngOnInit() {
     this.collection = this.clientService.collection;
-
+    this.title = 'Clients';
+    this.label = 'Tous les clients';
     console.log(this.clientService.collection);
   }
 

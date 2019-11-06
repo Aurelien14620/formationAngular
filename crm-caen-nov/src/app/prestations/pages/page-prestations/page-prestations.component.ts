@@ -10,7 +10,7 @@ import { Prestation } from 'src/app/shared/models/prestation';
 export class PagePrestationsComponent implements OnInit {
 
   public collection: Prestation[];
-  public libelles = [ 'Type', 'Client' , 'NbJours', 'TjmHT', 'Total HT', 'Total TTC', 'State'];
+  public headers = [ 'Type', 'Client' , 'NbJours', 'TjmHT', 'Total HT', 'Total TTC', 'State'];
 
   constructor(
     private prestationService: PrestationsService) { }

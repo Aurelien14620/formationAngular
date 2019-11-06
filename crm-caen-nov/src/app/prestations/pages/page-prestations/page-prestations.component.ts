@@ -25,7 +25,7 @@ export class PagePrestationsComponent implements OnInit {
 
   public update(item: any, event) {
     //console.log(item, event.target.value);
-    this.prestationService.update(item,event.target.value);
+    this.prestationService.update(item, event.target.value);
   }
 
 }

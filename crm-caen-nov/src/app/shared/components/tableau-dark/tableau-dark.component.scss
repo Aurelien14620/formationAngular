@@ -1,0 +1,11 @@
+@import "theme";
+
+#table-dark {
+  .state-inactif {
+    background: $color-error;
+  }
+
+  .state-actif {
+    background: $color-success;
+  }
+}

@@ -3,3 +3,10 @@ export enum State {
   OPTION = 'Option',
   CONFIRME = 'Confirmé'
 }
+
+/*
+[
+  {key: 'ANNULE', value: 'Annulé'},
+  {key: 'OPTION', value: 'Option'},
+  {key: 'CONFIRME', value: 'Confirmé'},
+]*/

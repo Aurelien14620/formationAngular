@@ -3,6 +3,7 @@
     <div class="form-group">
       <label for="typepresta">Type</label>
       <input formControlName="typePresta" type="text" class="form-control" id="typePresta" />
+      <div *ngIf="form.get('typePresta').touched && form.get('typePresta').invalid">champs invalid</div>
     </div>
 
     <div class="form-group">

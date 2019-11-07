@@ -31,6 +31,9 @@ export class PrestationsService {
   }
 
   // add item in collection
+  public add(item: Prestation) {
+    this.collection.push(new Prestation(item));
+  }
 
   // delete item in collection
 

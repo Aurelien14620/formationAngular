@@ -12,10 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 export class PagePrestationsComponent implements OnInit {
 
   public collection: Prestation[];
-  public headers = [ 'Type', 'Client' , 'NbJours', 'TjmHT', 'Total HT', 'Total TTC', 'State'];
+  public headers = ['Type', 'Client', 'NbJours', 'TjmHT', 'Total HT', 'Total TTC', 'State'];
   public states = Object.values(State);
   public title: string;
   public label: string;
+  public labelBtn: string;
+  public routeBtn: string;
 
   constructor(
     private prestationService: PrestationsService,
@@ -29,6 +31,8 @@ export class PagePrestationsComponent implements OnInit {
       this.title = donnees.title;
       this.label = donnees.label;
     });
+    this.labelBtn = 'Ajouter une prestation';
+    this.routeBtn = 'add';
 
     console.log(this.prestationService.collection);
   }

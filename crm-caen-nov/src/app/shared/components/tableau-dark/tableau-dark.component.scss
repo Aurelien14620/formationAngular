@@ -9,3 +9,19 @@
     background: $color-success;
   }
 }
+
+app-template-a {
+  #table-dark {
+     .state-actif {
+      background: $color2;
+    }
+  }
+}
+
+app-template-b {
+  #table-dark {
+     .state-actif {
+      background: $color1;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import 'theme';
+// :host() {} // before angular 7
+:host {
+ margin-left: 10px;
+}
+span {
+ display: inline-block;
+ a {
+   padding: .5em 1em;
+   display: block;
+   background: $dark-color;
+   transition: all .5s;
+   color: $light-color;
+   &:hover {
+     background: darken($dark-color, 10);
+   }
+ }
+}
+:host-context(app-template-a) span {
+ a {
+   background: $color2;
+   &:hover {
+     background: darken($color2, 10);
+   }
+ }
+}
+:host-context(app-template-b) span {
+ a {
+   background: $color1;
+   &:hover {
+     background: darken($color1, 10);
+   }
+ }
+}

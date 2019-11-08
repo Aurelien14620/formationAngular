@@ -10,3 +10,7 @@
   </li>
 
 </ul>
+
+<hr>
+
+<button *ngIf="version$ | async as version" (click)="upgradeVersion()">++ {{ version }}</button>

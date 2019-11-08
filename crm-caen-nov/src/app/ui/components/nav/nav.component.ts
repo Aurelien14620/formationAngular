@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VersionService } from 'src/app/shared/services/version.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  public version$: BehaviorSubject<number>;
+  //public title2: string;
+  constructor(
+    private vs: VersionService
+  ) {
+    //this.title2 = 'test';
+   }
 
   ngOnInit() {
+    this.version$ = this.vs.version$;
+    //this.title2 = 'test2';
   }
 
+  upgradeVersion(){
+    this.vs.upgrade();
+  }
 }

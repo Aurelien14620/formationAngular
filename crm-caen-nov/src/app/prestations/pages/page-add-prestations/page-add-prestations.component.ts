@@ -29,12 +29,13 @@ export class PageAddPrestationsComponent implements OnInit {
   }
 
   public add(item: Prestation) {
-    this.prestationService.add(item);
+    this.prestationService.add(item).then((res) => {
+      //res étant la réponse de l'api
+
+      //redirection relative par rapport à la route sur laquelle vous êtes.
+      this.router.navigate(['../'], { relativeTo: this.route });
+    });
     //this.router.navigate(['prestations']);
-
-    //redirection relative par rapport à la route sur laquelle vous êtes.
-    this.router.navigate(['../'], { relativeTo: this.route });
-
     //this.router.navigate(['prestations/edit', item.id]);
   }
 }

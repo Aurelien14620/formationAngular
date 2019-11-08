@@ -1,0 +1,6 @@
+<app-template-a [title]="title" [label]="label">
+  <app-form-prestation
+    *ngIf="item$ | async as item"
+    (nItem)="edit($event)"
+    [init]="item"></app-form-prestation>
+</app-template-a>
